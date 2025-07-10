@@ -1,6 +1,16 @@
 body {
-    font-family: 'Inter', sans-serif;
-  }
-  .gradient-bg {
-    background: linear-gradient(135deg, #1f2937 0%, #3b82f6 100%);
-  }
+  font-family: 'Inter', sans-serif;
+}
+.gradient-bg {
+  background: linear-gradient(135deg, #1f2937 0%, #3b82f6 100%);
+}
+.animate-fade-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease;
+}
+
+.fade-up-start {
+  opacity: 0;
+  transform: translateY(40px);
+}
