@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tubora Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom css -->
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body class="bg-gray-900 text-white dashboard-pages">
+  <!-- Sidebar and Main Layout -->
+  <div class="flex min-h-screen relative">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h1 class="mb-8">
+        <a href="/" class="text-3xl font-bold text-blue-400">Tubora</a>
+      </h1>
+      <nav class="space-y-4">
+        <a href="../index.html" class="block hover:text-blue-400 text-white">Dashboard</a>
+        <!-- <a href="#channel" class="block text-white hover:text-blue-400">Channel Overview</a> -->
+        <a href="index.html" class="block active hover:text-blue-400">Bot Controls</a>
+        <a href="../botsession" class="block text-white hover:text-blue-400">Bot Sessions</a>
+        <a href="#settings" class="block text-white hover:text-blue-400">Settings</a>
+      </nav>
+    </aside>
+
+    <aside class="w-[65%] h-full bg-gray-800 p-6 hide md:hidden fixed top-0 left-0 z-30" id="side-bar">
+      <div class="flex flex-row items-center justify-between mb-8">
+        <h1 class="text-3xl font-bold text-blue-400">Tubora</h1>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md md:hidden block" id="close-sidebar-btn">✖</button>
+      </div>
+      <nav class="space-y-4">
+        <a href="../index.html" class="block hover:text-blue-400 text-white">Dashboard</a>
+        <!-- <a href="#channel" class="block text-white hover:text-blue-400">Channel Overview</a> -->
+        <a href="index.html" class="block active hover:text-blue-400">Bot Controls</a>
+        <a href="../botsession" class="block text-white hover:text-blue-400">Bot Sessions</a>
+        <a href="#settings" class="block text-white hover:text-blue-400">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 md:p-10">
+      <!-- Header -->
+      <header class="flex items-center justify-between mb-10">
+        <h2 class="text-3xl font-bold">Bot Controls</h2>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md md:hidden block" id="open-sidebar-btn">☰</button>
+      </header>
+
+      
+    </main>
+  </div>
+
+  <!-- JS -->
+  <script src="../../js/main.js"></script>
+</body>
+
+</html>

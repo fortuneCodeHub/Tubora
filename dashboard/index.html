@@ -7,7 +7,7 @@
   <title>Tubora Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body class="bg-gray-900 text-white dashboard-pages">
@@ -15,12 +15,14 @@
   <div class="flex min-h-screen relative">
     <!-- Sidebar -->
     <aside class="w-64 bg-gray-800 p-6 hidden md:block">
-      <h1 class="text-3xl font-bold text-blue-400 mb-8">Tubora</h1>
+      <h1 class="mb-8">
+        <a href="/" class="text-3xl font-bold text-blue-400">Tubora</a>
+      </h1>
       <nav class="space-y-4">
-        <a href="#dashboard" class="block text-white hover:text-blue-400 ">Dashboard</a>
+        <a href="index.html" class="block hover:text-blue-400 active">Dashboard</a>
         <!-- <a href="#channel" class="block text-white hover:text-blue-400">Channel Overview</a> -->
-        <a href="#" class="block text-white hover:text-blue-400">Bot Controls</a>
-        <a href="#" class="block text-white hover:text-blue-400">Bot Sessions</a>
+        <a href="botcontrol" class="block text-white hover:text-blue-400">Bot Controls</a>
+        <a href="botsession" class="block text-white hover:text-blue-400">Bot Sessions</a>
         <a href="#settings" class="block text-white hover:text-blue-400">Settings</a>
       </nav>
     </aside>
@@ -31,10 +33,10 @@
         <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md md:hidden block" id="close-sidebar-btn">✖</button>
       </div>
       <nav class="space-y-4">
-        <a href="#dashboard" class="block text-white hover:text-blue-400 ">Dashboard</a>
+        <a href="index.html" class="block hover:text-blue-400 active">Dashboard</a>
         <!-- <a href="#channel" class="block text-white hover:text-blue-400">Channel Overview</a> -->
-        <a href="#" class="block text-white hover:text-blue-400">Bot Controls</a>
-        <a href="#" class="block text-white hover:text-blue-400">Bot Sessions</a>
+        <a href="botcontrol" class="block text-white hover:text-blue-400">Bot Controls</a>
+        <a href="botsession" class="block text-white hover:text-blue-400">Bot Sessions</a>
         <a href="#settings" class="block text-white hover:text-blue-400">Settings</a>
       </nav>
     </aside>
@@ -97,7 +99,7 @@
   </div>
 
   <!-- JS -->
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
