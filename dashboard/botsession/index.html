@@ -16,8 +16,8 @@
   <!-- Sidebar and Main Layout -->
   <div class="flex min-h-screen relative">
     <!-- Sidebar -->
-    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
-      <h1 class="mb-8">
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block fixed top-0 left-0 h-screen">
+      <h1 class="mb-8 border-b pb-8">
         <a href="/" class="text-3xl font-bold text-blue-400">Tubora</a>
       </h1>
       <nav class="space-y-4">
@@ -30,8 +30,10 @@
     </aside>
 
     <aside class="w-[65%] h-full bg-gray-800 p-6 hide md:hidden fixed top-0 left-0 z-30" id="side-bar">
-      <div class="flex flex-row items-center justify-between mb-8">
-        <h1 class="text-3xl font-bold text-blue-400">Tubora</h1>
+      <div class="flex flex-row items-center justify-between mb-8 border-b pb-8">
+        <h1 class="">
+            <a href="/" class="text-3xl font-bold text-blue-400">Tubora</a>
+          </h1>
         <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md md:hidden block" id="close-sidebar-btn">✖</button>
       </div>
       <nav class="space-y-4">
@@ -44,14 +46,52 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 p-6 md:p-10">
+    <main class="flex-1 md:ml-64 p-6 md:p-10 overflow-hidden">
       <!-- Header -->
       <header class="flex items-center justify-between mb-10">
         <h2 class="text-3xl font-bold">Bot Sessions</h2>
         <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md md:hidden block" id="open-sidebar-btn">☰</button>
       </header>
 
-      
+      <section class="bg-gray-800 p-6 rounded-xl shadow-lg overflow-x-auto">
+        <h3 class="text-2xl font-semibold mb-6">Recent Bot Sessions</h3>
+        <table class="w-full table-auto text-left text-sm">
+          <thead>
+            <tr class="bg-gray-700 text-gray-300">
+              <th class="py-3 px-4">#</th>
+              <th class="py-3 px-4">Video Link</th>
+              <th class="py-3 px-4">Target CTR</th>
+              <th class="py-3 px-4">Keywords</th>
+              <th class="py-3 px-4">Status</th>
+              <th class="py-3 px-4">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example row -->
+            <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+              <td class="py-3 px-4">1</td>
+              <td class="py-3 px-4 text-blue-400 truncate max-w-xs">https://youtube.com/watch?v=xyz123</td>
+              <td class="py-3 px-4">12%</td>
+              <td class="py-3 px-4">5</td>
+              <td class="py-3 px-4"><span class="text-green-400">Running</span></td>
+              <td class="py-3 px-4">
+                <button class="bg-red-600 hover:bg-red-700 px-3 py-1 text-sm rounded">Stop</button>
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+            <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+              <td class="py-3 px-4">2</td>
+              <td class="py-3 px-4 text-blue-400 truncate max-w-xs">https://youtube.com/watch?v=abc789</td>
+              <td class="py-3 px-4">10%</td>
+              <td class="py-3 px-4">3</td>
+              <td class="py-3 px-4"><span class="text-yellow-400">Queued</span></td>
+              <td class="py-3 px-4">
+                <button class="bg-blue-600 hover:bg-blue-700 px-3 py-1 text-sm rounded">View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
   </div>
 

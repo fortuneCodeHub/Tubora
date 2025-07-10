@@ -16,8 +16,8 @@
   <!-- Sidebar and Main Layout -->
   <div class="flex min-h-screen relative">
     <!-- Sidebar -->
-    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
-      <h1 class="mb-8">
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block fixed top-0 left-0 h-screen">
+      <h1 class="mb-8 border-b pb-8">
         <a href="/" class="text-3xl font-bold text-blue-400">Tubora</a>
       </h1>
       <nav class="space-y-4">
@@ -30,8 +30,10 @@
     </aside>
 
     <aside class="w-[65%] h-full bg-gray-800 p-6 hide md:hidden fixed top-0 left-0 z-30" id="side-bar">
-      <div class="flex flex-row items-center justify-between mb-8">
-        <h1 class="text-3xl font-bold text-blue-400">Tubora</h1>
+      <div class="flex flex-row items-center justify-between mb-8 border-b pb-8">
+        <h1 class="">
+          <a href="/" class="text-3xl font-bold text-blue-400">Tubora</a>
+        </h1>
         <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md md:hidden block" id="close-sidebar-btn">✖</button>
       </div>
       <nav class="space-y-4">
@@ -44,19 +46,69 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 p-6 md:p-10">
+    <main class="flex-1 md:ml-64 p-6 md:p-10">
       <!-- Header -->
       <header class="flex items-center justify-between mb-10">
         <h2 class="text-3xl font-bold">Bot Controls</h2>
         <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md md:hidden block" id="open-sidebar-btn">☰</button>
       </header>
 
+      <section class="bg-gray-800 p-6 rounded-xl shadow-lg max-w-4xl mx-auto mt-[70px]">
+        <h2 class="text-2xl mb-4 font-bold">Create New Bot Session</h2>
+        <form id="bot-form" class="space-y-6">
       
+          <!-- Your video -->
+          <div>
+            <label class="block text-white mb-1">Link to Your Video</label>
+            <input type="text" name="video_link" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-0" placeholder="https://youtube.com/your-video">
+          </div>
+      
+          <!-- Competitor videos -->
+          <div>
+            <label class="block text-white mb-1">Links to Competitors' Videos</label>
+            <div id="competitor-list" class="flex flex-wrap gap-2 bg-gray-500 rounded"></div>
+            <div class="flex gap-2 mb-2">
+              <input type="text" id="competitor-input" class="flex-1 bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-0" placeholder="https://youtube.com/competitor-video">
+              <button type="button" onclick="addItem('competitor')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Add</button>
+            </div>
+          </div>
+      
+          <!-- Keywords -->
+          <div>
+            <label class="block text-white mb-1">Keywords</label>
+            <div id="keyword-list" class="flex flex-wrap gap-2 bg-gray-500 rounded"></div>
+            <div class="flex gap-2 mb-2">
+              <input type="text" id="keyword-input" class="flex-1 bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-0" placeholder="Enter keyword">
+              <button type="button" onclick="addItem('keyword')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Add</button>
+            </div>
+          </div>
+      
+          <!-- Comments -->
+          <div>
+            <label class="block text-white mb-1">Comments</label>
+            <div id="comment-list" class="flex flex-wrap gap-2 bg-gray-500 rounded"></div>
+            <div class="flex gap-2 mb-2">
+              <input type="text" id="comment-input" class="flex-1 bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-0" placeholder="Add a comment">
+              <button type="button" onclick="addItem('comment')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Add</button>
+            </div>
+          </div>
+      
+          <!-- Upload -->
+          <div>
+            <label class="block text-white mb-1">Upload Text File</label>
+            <input type="file" accept=".txt" class="block w-full text-white bg-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-0">
+          </div>
+      
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-md font-semibold">Start Bot</button>
+        </form>
+      </section>
+
     </main>
   </div>
 
   <!-- JS -->
   <script src="../../js/main.js"></script>
+  <script src="../../js/botcontrols.js"></script>
 </body>
 
 </html>
