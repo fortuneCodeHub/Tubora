@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tubora Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-900 text-white dashboard-page">
+  <!-- Sidebar and Main Layout -->
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-6 hidden md:block">
+      <h1 class="text-3xl font-bold text-blue-400 mb-8">Tubora</h1>
+      <nav class="space-y-4">
+        <a href="#dashboard" class="block text-white hover:text-blue-400 ">Dashboard</a>
+        <!-- <a href="#channel" class="block text-white hover:text-blue-400">Channel Overview</a> -->
+        <a href="#" class="block text-white hover:text-blue-400">Bot Controls</a>
+        <a href="#settings" class="block text-white hover:text-blue-400">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 md:p-10">
+      <!-- Header -->
+      <header class="flex items-center justify-between mb-10">
+        <h2 class="text-3xl font-bold">Dashboard</h2>
+        <!-- <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Log Out</button> -->
+      </header>
+
+      <!-- Cards Section -->
+      <section id="dashboard" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg fade-up-start">
+          <h3 class="text-lg font-semibold mb-2">Total Views</h3>
+          <p class="text-3xl font-bold text-blue-400">78,921</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg fade-up-start">
+          <h3 class="text-lg font-semibold mb-2">Avg. CTR</h3>
+          <p class="text-3xl font-bold text-blue-400">9.3%</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg fade-up-start">
+          <h3 class="text-lg font-semibold mb-2">Bot Sessions</h3>
+          <p class="text-3xl font-bold text-blue-400">162</p>
+        </div>
+      </section>
+
+      <!-- Channel Overview and Bot Controls -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-8" id="channel">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg fade-up-start">
+            <h3 class="text-2xl font-semibold mb-4">⚙️ Settings</h3>
+            <p class="text-gray-300">Coming soon...</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg fade-up-start" id="bot">
+            <h3 class="text-2xl font-semibold mb-4">⚙️ Bot Controls</h3>
+            <a href="#" class="w-full bg-blue-600 hover:bg-blue-700 py-2 px-2 rounded-md font-semibold">Check It Out</a>
+        </div>
+      </section>
+
+      <!-- Settings Placeholder -->
+      <!-- <section id="settings" class="mt-12">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+          
+        </div>
+      </section> -->
+
+      <!-- Channel overview -->
+      <!-- <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">🎥 Channel Overview</h3>
+        <ul class="text-gray-300 space-y-2">
+          <li><strong>Channel Name:</strong> Tubora Test Channel</li>
+          <li><strong>CTR Goal:</strong> 12.5%</li>
+          <li><strong>Current CTR:</strong> 8.3%</li>
+          <li><strong>Status:</strong> <span class="text-green-400">Active</span></li>
+        </ul>
+      </div> -->
+    </main>
+  </div>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
