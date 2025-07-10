@@ -14,3 +14,19 @@ body {
   opacity: 0;
   transform: translateY(40px);
 }
+
+/* Sidebar hidden state */
+.hide {
+  transform: translateX(-100%);
+  /* opacity: 0; */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: hidden;
+}
+
+/* Sidebar visible state */
+.show {
+  transform: translateX(0%);
+  /* opacity: 1; */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: block;
+}

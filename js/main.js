@@ -24,7 +24,7 @@ if (document.querySelector('.home-page')) {
     });
 }
 
-if (document.querySelector('.dashboard-page')) {
+if (document.querySelector('.dashboard-pages')) {
     // Example JS: Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -48,4 +48,16 @@ if (document.querySelector('.dashboard-page')) {
     document.querySelectorAll('.fade-up-start').forEach(section => {
         observer.observe(section);
     });
+
+    const openBtn = document.querySelector('#open-sidebar-btn');
+    const closeBtn = document.querySelector('#close-sidebar-btn');
+    const sideBar = document.querySelector('#side-bar')
+    openBtn.addEventListener('click', () => {
+        sideBar.classList.add('show')
+        sideBar.classList.remove('hide')
+    })
+    closeBtn.addEventListener('click', () => {
+        sideBar.classList.remove('show')
+        sideBar.classList.add('hide')
+    })
 }
